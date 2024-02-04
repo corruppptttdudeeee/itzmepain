@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentines</title>
+</head>
+<body background="heart.jpg">
+  <div>
+    <h1>Will You be My Girlfriend</h1>
+    <button id="yesbutton">Yes</button>
+    <button class="btn1" id="no">No</button>
+  </div>
+  <style>
+  button{
+     font-size:100px;
+     background-color:green;
+    }
+  .btn1{
+    background-color:red;
+  }
+  h1{
+     font-size: 100px;
+     color:white;
+    }
+  div{
+  text-align:center;
+  vertical-align: middle;
+}
+#no{
+  position:absolute;
+}
+
+  </style>
+  <script>
+    document.getElementById("yesbutton").addEventListener("click", function(){
+    alert("Are you sure?");
+    var answer = confirm ("Do you really love me? Press Ok")
+if (answer)
+window.location="loveyou.html";
+    });
+    function AlertIt() {
+
+}
+    var b = document.getElementById("no")
+    b.addEventListener("click",change);
+      function change(){
+      var i = Math.floor(Math.random()*1000)+1;
+      var j = Math.floor(Math.random()*700)+1;
+      b.style.left = i+"px";
+      b.style.top = i+"px";
+      }
+
+  </script>
+</body>
+</html>
